@@ -1,0 +1,22 @@
+# Ignore CLion and CMake generated files
+.idea/
+cmake-build-*/
+
+# Ignore compiled binaries and object files
+*.o
+*.obj
+*.so
+*.dll
+*.exe
+*.a
+*.lib
+*.dylib
+
+# Ignore configuration and log files
+*.log
+*.cache
+*.cmake
+
+# Ignore Qt Creator files
+*.pro.user
+*.qmake.stash

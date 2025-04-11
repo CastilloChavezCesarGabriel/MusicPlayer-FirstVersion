@@ -12,7 +12,6 @@
 
 class Model final : public QObject {
 Q_OBJECT
-
 private:
     QStringList song_list_;
     QVector<Song> songs_;
@@ -30,8 +29,8 @@ public:
     bool is_playing_ad() const { return playing_ad_; }
     QString get_song_at(int index) const;
 
-    void add(const QString &filePath);
-    void remove(const QString &filePath);
+    void add(const QString &file_path);
+    void remove(const QString &file_path);
     void load_ad_files();
     QString get_random_ad() const;
     void set_playing_ad(bool state) { playing_ad_ = state; }
@@ -48,9 +47,8 @@ signals:
 
 private:
     void load_songs();
-
-    static void save_to_resources(const QString &filePath);
-    static QStringList get_extension(const QString &directionPath);
+    static void save_to_resources(const QString &file_path);
+    static QStringList get_extension(const QString &direction_path);
     static QString get_music_path();
     static QString get_announcements_path();
 };

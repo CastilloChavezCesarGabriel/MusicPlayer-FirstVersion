@@ -73,10 +73,20 @@ QString Model::get_announcements_path() {
 
 void Model::add(const QString &file_path) {
     if (file_path.isEmpty()) return;
-    save_to_resources(file_path);
 
     QFileInfo info(file_path);
     QString new_file_path = get_music_path() + "/" + info.fileName();
+
+    auto it = std::find_if(songs_.begin(), songs_.end(), [&](const Song &s) {
+        return s.get_file_path() == new_file_path;
+    });
+
+    if (it != songs_.end()) {
+        qWarning() << "Song already added:" << new_file_path;
+        return;
+    }
+
+    save_to_resources(file_path);
     songs_.append(Song(0, info.fileName(), new_file_path));
     song_list_.append(new_file_path);
 
@@ -132,7 +142,6 @@ void Model::drop_files(const QList<QUrl> &urls) {
     for (const QUrl &url : urls) {
         QString file_path = url.toLocalFile();
         if (file_path.endsWith(".mp3") || file_path.endsWith(".wav")) {
-            new_songs.append(file_path);
             add(file_path);
         }
     }

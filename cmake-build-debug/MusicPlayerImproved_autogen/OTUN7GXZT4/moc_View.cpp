@@ -41,20 +41,20 @@ template <> constexpr inline auto View::qt_create_metaobjectdata<qt_meta_tag_ZN4
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
         "View",
-        "filesDropped",
+        "files_dropped",
         "",
         "QList<QUrl>",
         "urls",
-        "updateSongList",
+        "update_song_list",
         "songs"
     };
 
     QtMocHelpers::UintData qt_methods {
-        // Signal 'filesDropped'
+        // Signal 'files_dropped'
         QtMocHelpers::SignalData<void(const QList<QUrl> &)>(1, 2, QMC::AccessPublic, QMetaType::Void, {{
             { 0x80000000 | 3, 4 },
         }}),
-        // Slot 'updateSongList'
+        // Slot 'update_song_list'
         QtMocHelpers::SlotData<void(const QStringList &) const>(5, 2, QMC::AccessPublic, QMetaType::Void, {{
             { QMetaType::QStringList, 6 },
         }}),
@@ -81,8 +81,8 @@ void View::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
     auto *_t = static_cast<View *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->filesDropped((*reinterpret_cast< std::add_pointer_t<QList<QUrl>>>(_a[1]))); break;
-        case 1: _t->updateSongList((*reinterpret_cast< std::add_pointer_t<QStringList>>(_a[1]))); break;
+        case 0: _t->files_dropped((*reinterpret_cast< std::add_pointer_t<QList<QUrl>>>(_a[1]))); break;
+        case 1: _t->update_song_list((*reinterpret_cast< std::add_pointer_t<QStringList>>(_a[1]))); break;
         default: ;
         }
     }
@@ -99,7 +99,7 @@ void View::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
         }
     }
     if (_c == QMetaObject::IndexOfMethod) {
-        if (QtMocHelpers::indexOfMethod<void (View::*)(const QList<QUrl> & )>(_a, &View::filesDropped, 0))
+        if (QtMocHelpers::indexOfMethod<void (View::*)(const QList<QUrl> & )>(_a, &View::files_dropped, 0))
             return;
     }
 }
@@ -136,7 +136,7 @@ int View::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void View::filesDropped(const QList<QUrl> & _t1)
+void View::files_dropped(const QList<QUrl> & _t1)
 {
     QMetaObject::activate<void>(this, &staticMetaObject, 0, nullptr, _t1);
 }

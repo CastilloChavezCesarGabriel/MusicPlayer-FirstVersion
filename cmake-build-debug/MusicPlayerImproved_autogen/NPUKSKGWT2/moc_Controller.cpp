@@ -40,50 +40,50 @@ template <> constexpr inline auto Controller::qt_create_metaobjectdata<qt_meta_t
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
         "Controller",
-        "playSelectedSong",
+        "play_selected_song",
         "",
-        "playNextSong",
-        "playPreviousSong",
-        "addSong",
-        "removeSong",
-        "playRandomAd",
-        "skipAd",
-        "updateVolume",
+        "play_next_song",
+        "play_previous_song",
+        "add_song",
+        "remove_song",
+        "play_random_ad",
+        "skip_ad",
+        "update_volume",
         "volume",
-        "handleMediaStatus",
+        "handle_media_status",
         "QMediaPlayer::MediaStatus",
         "status",
-        "sortByNumber",
-        "sortByName"
+        "sort_by_number",
+        "sort_by_name"
     };
 
     QtMocHelpers::UintData qt_methods {
-        // Slot 'playSelectedSong'
+        // Slot 'play_selected_song'
         QtMocHelpers::SlotData<void()>(1, 2, QMC::AccessPublic, QMetaType::Void),
-        // Slot 'playNextSong'
+        // Slot 'play_next_song'
         QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPublic, QMetaType::Void),
-        // Slot 'playPreviousSong'
+        // Slot 'play_previous_song'
         QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPublic, QMetaType::Void),
-        // Slot 'addSong'
-        QtMocHelpers::SlotData<void()>(5, 2, QMC::AccessPublic, QMetaType::Void),
-        // Slot 'removeSong'
-        QtMocHelpers::SlotData<void()>(6, 2, QMC::AccessPublic, QMetaType::Void),
-        // Slot 'playRandomAd'
+        // Slot 'add_song'
+        QtMocHelpers::SlotData<void() const>(5, 2, QMC::AccessPublic, QMetaType::Void),
+        // Slot 'remove_song'
+        QtMocHelpers::SlotData<void() const>(6, 2, QMC::AccessPublic, QMetaType::Void),
+        // Slot 'play_random_ad'
         QtMocHelpers::SlotData<void()>(7, 2, QMC::AccessPublic, QMetaType::Void),
-        // Slot 'skipAd'
+        // Slot 'skip_ad'
         QtMocHelpers::SlotData<void()>(8, 2, QMC::AccessPublic, QMetaType::Void),
-        // Slot 'updateVolume'
-        QtMocHelpers::SlotData<void(int)>(9, 2, QMC::AccessPublic, QMetaType::Void, {{
+        // Slot 'update_volume'
+        QtMocHelpers::SlotData<void(int) const>(9, 2, QMC::AccessPublic, QMetaType::Void, {{
             { QMetaType::Int, 10 },
         }}),
-        // Slot 'handleMediaStatus'
+        // Slot 'handle_media_status'
         QtMocHelpers::SlotData<void(QMediaPlayer::MediaStatus)>(11, 2, QMC::AccessPublic, QMetaType::Void, {{
             { 0x80000000 | 12, 13 },
         }}),
-        // Slot 'sortByNumber'
-        QtMocHelpers::SlotData<void()>(14, 2, QMC::AccessPublic, QMetaType::Void),
-        // Slot 'sortByName'
-        QtMocHelpers::SlotData<void()>(15, 2, QMC::AccessPublic, QMetaType::Void),
+        // Slot 'sort_by_number'
+        QtMocHelpers::SlotData<void() const>(14, 2, QMC::AccessPublic, QMetaType::Void),
+        // Slot 'sort_by_name'
+        QtMocHelpers::SlotData<void() const>(15, 2, QMC::AccessPublic, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -107,17 +107,17 @@ void Controller::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     auto *_t = static_cast<Controller *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->playSelectedSong(); break;
-        case 1: _t->playNextSong(); break;
-        case 2: _t->playPreviousSong(); break;
-        case 3: _t->addSong(); break;
-        case 4: _t->removeSong(); break;
-        case 5: _t->playRandomAd(); break;
-        case 6: _t->skipAd(); break;
-        case 7: _t->updateVolume((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 8: _t->handleMediaStatus((*reinterpret_cast< std::add_pointer_t<QMediaPlayer::MediaStatus>>(_a[1]))); break;
-        case 9: _t->sortByNumber(); break;
-        case 10: _t->sortByName(); break;
+        case 0: _t->play_selected_song(); break;
+        case 1: _t->play_next_song(); break;
+        case 2: _t->play_previous_song(); break;
+        case 3: _t->add_song(); break;
+        case 4: _t->remove_song(); break;
+        case 5: _t->play_random_ad(); break;
+        case 6: _t->skip_ad(); break;
+        case 7: _t->update_volume((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 8: _t->handle_media_status((*reinterpret_cast< std::add_pointer_t<QMediaPlayer::MediaStatus>>(_a[1]))); break;
+        case 9: _t->sort_by_number(); break;
+        case 10: _t->sort_by_name(); break;
         default: ;
         }
     }

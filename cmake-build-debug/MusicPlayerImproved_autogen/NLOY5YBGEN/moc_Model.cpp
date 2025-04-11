@@ -39,24 +39,24 @@ template <> constexpr inline auto Model::qt_create_metaobjectdata<qt_meta_tag_ZN
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
         "Model",
-        "songsUpdated",
+        "songs_updated",
         "",
         "songs",
-        "adsUpdated",
+        "ads_updated",
         "ads",
-        "disableButtons"
+        "disable_buttons"
     };
 
     QtMocHelpers::UintData qt_methods {
-        // Signal 'songsUpdated'
+        // Signal 'songs_updated'
         QtMocHelpers::SignalData<void(const QStringList &)>(1, 2, QMC::AccessPublic, QMetaType::Void, {{
             { QMetaType::QStringList, 3 },
         }}),
-        // Signal 'adsUpdated'
+        // Signal 'ads_updated'
         QtMocHelpers::SignalData<void(const QStringList &)>(4, 2, QMC::AccessPublic, QMetaType::Void, {{
             { QMetaType::QStringList, 5 },
         }}),
-        // Signal 'disableButtons'
+        // Signal 'disable_buttons'
         QtMocHelpers::SignalData<void()>(6, 2, QMC::AccessPublic, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
@@ -81,18 +81,18 @@ void Model::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
     auto *_t = static_cast<Model *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->songsUpdated((*reinterpret_cast< std::add_pointer_t<QStringList>>(_a[1]))); break;
-        case 1: _t->adsUpdated((*reinterpret_cast< std::add_pointer_t<QStringList>>(_a[1]))); break;
-        case 2: _t->disableButtons(); break;
+        case 0: _t->songs_updated((*reinterpret_cast< std::add_pointer_t<QStringList>>(_a[1]))); break;
+        case 1: _t->ads_updated((*reinterpret_cast< std::add_pointer_t<QStringList>>(_a[1]))); break;
+        case 2: _t->disable_buttons(); break;
         default: ;
         }
     }
     if (_c == QMetaObject::IndexOfMethod) {
-        if (QtMocHelpers::indexOfMethod<void (Model::*)(const QStringList & )>(_a, &Model::songsUpdated, 0))
+        if (QtMocHelpers::indexOfMethod<void (Model::*)(const QStringList & )>(_a, &Model::songs_updated, 0))
             return;
-        if (QtMocHelpers::indexOfMethod<void (Model::*)(const QStringList & )>(_a, &Model::adsUpdated, 1))
+        if (QtMocHelpers::indexOfMethod<void (Model::*)(const QStringList & )>(_a, &Model::ads_updated, 1))
             return;
-        if (QtMocHelpers::indexOfMethod<void (Model::*)()>(_a, &Model::disableButtons, 2))
+        if (QtMocHelpers::indexOfMethod<void (Model::*)()>(_a, &Model::disable_buttons, 2))
             return;
     }
 }
@@ -129,19 +129,19 @@ int Model::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void Model::songsUpdated(const QStringList & _t1)
+void Model::songs_updated(const QStringList & _t1)
 {
     QMetaObject::activate<void>(this, &staticMetaObject, 0, nullptr, _t1);
 }
 
 // SIGNAL 1
-void Model::adsUpdated(const QStringList & _t1)
+void Model::ads_updated(const QStringList & _t1)
 {
     QMetaObject::activate<void>(this, &staticMetaObject, 1, nullptr, _t1);
 }
 
 // SIGNAL 2
-void Model::disableButtons()
+void Model::disable_buttons()
 {
     QMetaObject::activate(this, &staticMetaObject, 2, nullptr);
 }

@@ -1,2 +1,2 @@
-set(__QT_DEPLOY_TARGET_MusicPlayerImproved_FILE /Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/cmake-build-debug/MusicPlayerImproved)
+set(__QT_DEPLOY_TARGET_MusicPlayerImproved_FILE /Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/cmake-build-debug/MusicPlayerImproved)
 set(__QT_DEPLOY_TARGET_MusicPlayerImproved_TYPE EXECUTABLE)

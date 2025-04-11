@@ -5,7 +5,6 @@
 #include <QListView>
 #include <QStringListModel>
 #include <QHBoxLayout>
-#include <QSlider>
 #include <QLabel>
 
 class View : public QWidget {
@@ -38,7 +37,7 @@ private:
     QHBoxLayout *volumeLayout{};
     QHBoxLayout *filesLayout{};
     QHBoxLayout *sortLayout{};
-    void setupUI();
+    void setup_ui();
 
 public slots:
     void updateSongList(const QStringList &songs) const;

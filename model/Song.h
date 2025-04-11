@@ -4,13 +4,13 @@
 
 class Song {
 private:
-    int number;
-    QString name;
-    QString author;
-    QString album;
-    QString cover;
-    QString genre;
-    QString filePath;
+    int number_;
+    QString name_;
+    QString author_;
+    QString album_;
+    QString cover_;
+    QString genre_;
+    QString file_path_;
 
 public:
     Song(int number, const QString &name, const QString &filePath);

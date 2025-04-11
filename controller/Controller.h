@@ -11,11 +11,11 @@ class Controller : public QObject {
 Q_OBJECT
 
 private:
-    Model *model;
-    View *view;
-    QMediaPlayer *mediaPlayer;
-    QAudioOutput *audioOutput;
-    QStack<int> songStack;
+    Model *model_;
+    View *view_;
+    QMediaPlayer *media_player_;
+    QAudioOutput *audio_output_;
+    QStack<int> song_stack_;
 
 public:
     explicit Controller(Model *model, View *view, QObject *parent = nullptr);

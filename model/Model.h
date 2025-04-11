@@ -5,8 +5,6 @@
 #include <QDir>
 #include <QMediaPlayer>
 #include <QAudioOutput>
-#include <QRandomGenerator>
-#include <QVector>
 #include <algorithm>
 #include <random>
 #include "Sorting.h"

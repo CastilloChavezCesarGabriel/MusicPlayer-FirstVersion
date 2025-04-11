@@ -8,6 +8,7 @@ int main(int argc, char *argv[]) {
     Model model;
     View view;
     Controller controller(&model, &view);
+    (void)controller;
     view.show();
-    return QApplication::exec();
+    return app.exec();
 }

@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja -DCMAKE_PREFIX_PATH=/Users/developer/Qt/6.8.2/macos -G Ninja -S /Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved -B /Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/cmake-build-debug
+/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja -DCMAKE_PREFIX_PATH=/Users/developer/Qt/6.8.2/macos -G Ninja -S /Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved -B /Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/cmake-build-debug
 -- The C compiler identification is AppleClang 17.0.0.17000013
 -- The CXX compiler identification is AppleClang 17.0.0.17000013
 -- Detecting C compiler ABI info
@@ -20,6 +20,6 @@
 -- Found OpenGL: /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk/System/Library/Frameworks/OpenGL.framework
 -- Found WrapOpenGL: TRUE
 -- Could NOT find WrapVulkanHeaders (missing: Vulkan_INCLUDE_DIR) 
--- Configuring done (2.8s)
--- Generating done (1.9s)
--- Build files have been written to: /Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/cmake-build-debug
+-- Configuring done (0.9s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/cmake-build-debug

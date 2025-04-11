@@ -1,17 +1,17 @@
 #include "Controller.h"
-#include <QDebug>
 #include <QTimer>
+#include <QRandomGenerator>
 
 Controller::Controller(Model *model, View *view, QObject *parent)
-        : QObject(parent), model(model), view(view) {
+        : QObject(parent), model_(model), view_(view) {
 
-    mediaPlayer = new QMediaPlayer(this);
-    audioOutput = new QAudioOutput(this);
-    mediaPlayer->setAudioOutput(audioOutput);
+    media_player_ = new QMediaPlayer(this);
+    audio_output_ = new QAudioOutput(this);
+    media_player_->setAudioOutput(audio_output_);
 
     connect(view->btnPlay, &QPushButton::clicked, this, &Controller::playSelectedSong);
-    connect(view->btnPause, &QPushButton::clicked, mediaPlayer, &QMediaPlayer::pause);
-    connect(view->btnStop, &QPushButton::clicked, mediaPlayer, &QMediaPlayer::stop);
+    connect(view->btnPause, &QPushButton::clicked, media_player_, &QMediaPlayer::pause);
+    connect(view->btnStop, &QPushButton::clicked, media_player_, &QMediaPlayer::stop);
     connect(view->btnNext, &QPushButton::clicked, this, &Controller::playNextSong);
     connect(view->btnPrevious, &QPushButton::clicked, this, &Controller::playPreviousSong);
     connect(view->volumeSlider, &QSlider::valueChanged, this, &Controller::updateVolume);
@@ -22,102 +22,102 @@ Controller::Controller(Model *model, View *view, QObject *parent)
     connect(view->btnSortByName, &QPushButton::clicked, this, &Controller::sortByName);
     connect(model, &Model::songsUpdated, view, &View::updateSongList);
     connect(view, &View::filesDropped, model, &Model::dropFiles);
-    connect(mediaPlayer, &QMediaPlayer::mediaStatusChanged, this, &Controller::handleMediaStatus);
+    connect(media_player_, &QMediaPlayer::mediaStatusChanged, this, &Controller::handleMediaStatus);
     connect(model, &Model::disableButtons, view, [view]() { view->setButtonsEnabled(false); });
 }
 
 void Controller::playSelectedSong() {
-    if (mediaPlayer->playbackState() == QMediaPlayer::PausedState) {
-        mediaPlayer->play();
+    if (media_player_->playbackState() == QMediaPlayer::PausedState) {
+        media_player_->play();
         return;
     }
 
     if (QRandomGenerator::global()->bounded(100) < 30) {
-        songStack.push(view->songListView->currentIndex().row());
+        song_stack_.push(view_->songListView->currentIndex().row());
         playRandomAd();
         return;
     }
 
-    view->skipAdButton->setVisible(false);
+    view_->skipAdButton->setVisible(false);
 
-    QModelIndex index = view->songListView->currentIndex();
+    QModelIndex index = view_->songListView->currentIndex();
     if (!index.isValid()) return;
 
-    QString filePath = model->getSongAt(index.row());
+    QString filePath = model_->getSongAt(index.row());
     if (filePath.isEmpty()) return;
 
-    mediaPlayer->stop();
-    mediaPlayer->setSource(QUrl());
-    mediaPlayer->setSource(QUrl::fromLocalFile(filePath));
-    mediaPlayer->play();
+    media_player_->stop();
+    media_player_->setSource(QUrl());
+    media_player_->setSource(QUrl::fromLocalFile(filePath));
+    media_player_->play();
 }
 
 void Controller::playNextSong() {
-    int currentIndex = view->songListView->currentIndex().row();
-    if (currentIndex < model->getSongs().size() - 1) {
-        QModelIndex nextIndex = view->songListModel->index(currentIndex + 1,0);
-        view->songListView->setCurrentIndex(nextIndex);
+    int currentIndex = view_->songListView->currentIndex().row();
+    if (currentIndex < model_->getSongs().size() - 1) {
+        QModelIndex nextIndex = view_->songListModel->index(currentIndex + 1,0);
+        view_->songListView->setCurrentIndex(nextIndex);
         playSelectedSong();
     } else {
-        mediaPlayer->stop();
+        media_player_->stop();
     }
 }
 
 void Controller::playPreviousSong() {
-    int currentIndex = view->songListView->currentIndex().row();
+    int currentIndex = view_->songListView->currentIndex().row();
     if (currentIndex > 0) {
-        QModelIndex prevIndex = view->songListModel->index(currentIndex - 1,0);
-        view->songListView->setCurrentIndex(prevIndex);
+        QModelIndex prevIndex = view_->songListModel->index(currentIndex - 1,0);
+        view_->songListView->setCurrentIndex(prevIndex);
         playSelectedSong();
     }
 }
 
 void Controller::addSong() {
-    QString filePath = QFileDialog::getOpenFileName(view);
+    QString filePath = QFileDialog::getOpenFileName(view_);
     if (!filePath.isEmpty()) {
-        model->add(filePath);
-        view->updateSongList(model->getSongs());
+        model_->add(filePath);
+        view_->updateSongList(model_->getSongs());
     }
 }
 
 void Controller::removeSong() {
-    QModelIndex index = view->songListView->currentIndex();
+    QModelIndex index = view_->songListView->currentIndex();
     if (!index.isValid()) return;
 
-    QString filePath = model->getSongAt(index.row());
+    QString filePath = model_->getSongAt(index.row());
     if (filePath.isEmpty()) return;
 
-    model->remove(filePath);
+    model_->remove(filePath);
 }
 
 void Controller::playRandomAd() {
-    QString adPath = model->getRandomAd();
+    QString adPath = model_->getRandomAd();
     if (adPath.isEmpty()) return;
 
     qDebug() << "Playing ad:" << adPath;
 
-    model->setPlayingAd(true);
-    view->setButtonsEnabled(false);
+    model_->setPlayingAd(true);
+    view_->setButtonsEnabled(false);
     int delay = QRandomGenerator::global()->bounded(5, 10) * 1000;
-    QTimer::singleShot(delay, view->skipAdButton, &QPushButton::show);
+    QTimer::singleShot(delay, view_->skipAdButton, &QPushButton::show);
 
-    mediaPlayer->stop();
-    mediaPlayer->setSource(QUrl::fromLocalFile(adPath));
-    mediaPlayer->play();
+    media_player_->stop();
+    media_player_->setSource(QUrl::fromLocalFile(adPath));
+    media_player_->play();
 }
 
 void Controller::skipAd() {
-    if (!model->isPlayingAd()) return;
+    if (!model_->isPlayingAd()) return;
 
-    mediaPlayer->stop();
-    model->setPlayingAd(false);
-    view->skipAdButton->setVisible(false);
-    view->setButtonsEnabled(true);
+    media_player_->stop();
+    model_->setPlayingAd(false);
+    view_->skipAdButton->setVisible(false);
+    view_->setButtonsEnabled(true);
 
-    if (!songStack.isEmpty()) {
-        int originalSongIndex = songStack.pop();
-        QModelIndex index = view->songListModel->index(originalSongIndex,0);
-        view->songListView->setCurrentIndex(index);
+    if (!song_stack_.isEmpty()) {
+        int originalSongIndex = song_stack_.pop();
+        QModelIndex index = view_->songListModel->index(originalSongIndex,0);
+        view_->songListView->setCurrentIndex(index);
         playSelectedSong();
     } else {
         playNextSong();
@@ -126,21 +126,21 @@ void Controller::skipAd() {
 
 void Controller::updateVolume(int volume) {
     qreal volumeFactor = volume / 100.0;
-    audioOutput->setVolume(volumeFactor);
-    view->volumeLabel->setText(QString("Volume: %1%").arg(volume));
+    audio_output_->setVolume(volumeFactor);
+    view_->volumeLabel->setText(QString("Volume: %1%").arg(volume));
 }
 
 void Controller::handleMediaStatus(QMediaPlayer::MediaStatus status) {
     if (status == QMediaPlayer::EndOfMedia) {
-        if (model->isPlayingAd()) {
-            model->setPlayingAd(false);
-            view->skipAdButton->setVisible(false);
-            view->setButtonsEnabled(true);
+        if (model_->isPlayingAd()) {
+            model_->setPlayingAd(false);
+            view_->skipAdButton->setVisible(false);
+            view_->setButtonsEnabled(true);
 
-            if (!songStack.isEmpty()) {
-                int nextSongIndex = songStack.pop();
-                QModelIndex index = view->songListModel->index(nextSongIndex,0);
-                view->songListView->setCurrentIndex(index);
+            if (!song_stack_.isEmpty()) {
+                int nextSongIndex = song_stack_.pop();
+                QModelIndex index = view_->songListModel->index(nextSongIndex,0);
+                view_->songListView->setCurrentIndex(index);
                 playSelectedSong();
             } else {
                 playNextSong();
@@ -148,32 +148,32 @@ void Controller::handleMediaStatus(QMediaPlayer::MediaStatus status) {
             return;
         }
 
-        int nextIndex = view->songListView->currentIndex().row() + 1;
+        int nextIndex = view_->songListView->currentIndex().row() + 1;
         if (QRandomGenerator::global()->bounded(100) < 30) {
-            if (nextIndex < model->getSongs().size()) {
-                songStack.push(nextIndex);
+            if (nextIndex < model_->getSongs().size()) {
+                song_stack_.push(nextIndex);
             }
             playRandomAd();
         } else {
-            if (nextIndex < model->getSongs().size()) {
-                view->songListView->setCurrentIndex(view->songListModel->index(nextIndex, 0));
+            if (nextIndex < model_->getSongs().size()) {
+                view_->songListView->setCurrentIndex(view_->songListModel->index(nextIndex, 0));
                 playSelectedSong();
             } else {
-                mediaPlayer->stop();
+                media_player_->stop();
             }
         }
     }
 }
 
 void Controller::sortByNumber() {
-    model->sortByNumber();
-    view->updateSongList(model->getSongs());
-    view->setButtonsEnabled(true);
+    model_->sortByNumber();
+    view_->updateSongList(model_->getSongs());
+    view_->setButtonsEnabled(true);
 }
 
 void Controller::sortByName() {
-    model->sortByName();
-    view->updateSongList(model->getSongs());
-    view->setButtonsEnabled(true);
+    model_->sortByName();
+    view_->updateSongList(model_->getSongs());
+    view_->setButtonsEnabled(true);
 }
 

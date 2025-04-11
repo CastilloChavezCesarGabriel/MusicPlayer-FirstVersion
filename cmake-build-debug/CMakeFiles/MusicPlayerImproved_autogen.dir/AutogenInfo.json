@@ -1,15 +1,15 @@
 {
-	"BUILD_DIR" : "/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/cmake-build-debug/MusicPlayerImproved_autogen",
-	"CMAKE_BINARY_DIR" : "/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/cmake-build-debug",
-	"CMAKE_CURRENT_BINARY_DIR" : "/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/cmake-build-debug",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved",
+	"BUILD_DIR" : "/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/cmake-build-debug/MusicPlayerImproved_autogen",
+	"CMAKE_BINARY_DIR" : "/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/cmake-build-debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/cmake-build-debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved",
 	"CMAKE_EXECUTABLE" : "/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/CMakeLists.txt",
+		"/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/CMakeLists.txt",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeSystem.cmake.in",
-		"/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/cmake-build-debug/CMakeFiles/3.30.5/CMakeSystem.cmake",
+		"/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/cmake-build-debug/CMakeFiles/3.30.5/CMakeSystem.cmake",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Platform/Darwin-Initialize.cmake",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake",
@@ -108,7 +108,7 @@
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeFindBinUtils.cmake",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeCCompiler.cmake.in",
-		"/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/cmake-build-debug/CMakeFiles/3.30.5/CMakeCCompiler.cmake",
+		"/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/cmake-build-debug/CMakeFiles/3.30.5/CMakeCCompiler.cmake",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeDetermineCompiler.cmake",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Platform/Darwin-Determine-CXX.cmake",
@@ -200,7 +200,7 @@
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeFindBinUtils.cmake",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeCXXCompiler.cmake.in",
-		"/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/cmake-build-debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake",
+		"/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/cmake-build-debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake",
@@ -229,7 +229,7 @@
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeDetermineCompilerSupport.cmake",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Internal/FeatureTesting.cmake",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeCCompiler.cmake.in",
-		"/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/cmake-build-debug/CMakeFiles/3.30.5/CMakeCCompiler.cmake",
+		"/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/cmake-build-debug/CMakeFiles/3.30.5/CMakeCCompiler.cmake",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Compiler/AppleClang-CXX.cmake",
@@ -250,7 +250,7 @@
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeDetermineCompilerSupport.cmake",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Internal/FeatureTesting.cmake",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeCXXCompiler.cmake.in",
-		"/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/cmake-build-debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake",
+		"/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/cmake-build-debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake",
 		"/opt/homebrew/lib/cmake/Qt6/Qt6ConfigVersion.cmake",
 		"/opt/homebrew/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake",
 		"/opt/homebrew/lib/cmake/Qt6/Qt6Config.cmake",
@@ -679,46 +679,46 @@
 		"/opt/homebrew/lib/cmake/Qt6Multimedia/Qt6QDarwinMediaPluginAdditionalTargetInfo.cmake",
 		"/opt/homebrew/lib/cmake/Qt6Multimedia/Qt6MultimediaVersionlessAliasTargets.cmake"
 	],
-	"CMAKE_SOURCE_DIR" : "/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved",
+	"CMAKE_SOURCE_DIR" : "/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved",
 	"CROSS_CONFIG" : false,
-	"DEP_FILE" : "/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/cmake-build-debug/MusicPlayerImproved_autogen/deps",
+	"DEP_FILE" : "/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/cmake-build-debug/MusicPlayerImproved_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "MusicPlayerImproved_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[
-			"/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/controller/Controller.h",
+			"/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/controller/Controller.h",
 			"MU",
 			"NPUKSKGWT2/moc_Controller.cpp",
 			null
 		],
 		[
-			"/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/model/Model.h",
+			"/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/model/Model.h",
 			"MU",
 			"NLOY5YBGEN/moc_Model.cpp",
 			null
 		],
 		[
-			"/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/model/Song.h",
+			"/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/model/Song.h",
 			"MU",
 			"NLOY5YBGEN/moc_Song.cpp",
 			null
 		],
 		[
-			"/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/model/Sorting.h",
+			"/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/model/Sorting.h",
 			"MU",
 			"NLOY5YBGEN/moc_Sorting.cpp",
 			null
 		],
 		[
-			"/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/view/View.h",
+			"/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/view/View.h",
 			"MU",
 			"OTUN7GXZT4/moc_View.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/cmake-build-debug/MusicPlayerImproved_autogen/include",
-	"MOC_COMPILATION_FILE" : "/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/cmake-build-debug/MusicPlayerImproved_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/cmake-build-debug/MusicPlayerImproved_autogen/include",
+	"MOC_COMPILATION_FILE" : "/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/cmake-build-debug/MusicPlayerImproved_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : 
 	[
 		"QT_CORE_LIB",
@@ -773,46 +773,46 @@
 		"-c",
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/cmake-build-debug/MusicPlayerImproved_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/cmake-build-debug/MusicPlayerImproved_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 10,
-	"PARSE_CACHE_FILE" : "/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/cmake-build-debug/CMakeFiles/MusicPlayerImproved_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/cmake-build-debug/CMakeFiles/MusicPlayerImproved_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/opt/homebrew/share/qt/libexec/moc",
 	"QT_UIC_EXECUTABLE" : "/opt/homebrew/share/qt/libexec/uic",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 9,
-	"SETTINGS_FILE" : "/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/cmake-build-debug/CMakeFiles/MusicPlayerImproved_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/cmake-build-debug/CMakeFiles/MusicPlayerImproved_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
 		[
-			"/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/controller/Controller.cpp",
+			"/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/controller/Controller.cpp",
 			"MU",
 			null
 		],
 		[
-			"/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/main.cpp",
+			"/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/main.cpp",
 			"MU",
 			null
 		],
 		[
-			"/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/model/Model.cpp",
+			"/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/model/Model.cpp",
 			"MU",
 			null
 		],
 		[
-			"/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/model/Song.cpp",
+			"/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/model/Song.cpp",
 			"MU",
 			null
 		],
 		[
-			"/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/model/Sorting.cpp",
+			"/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/model/Sorting.cpp",
 			"MU",
 			null
 		],
 		[
-			"/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/view/View.cpp",
+			"/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/view/View.cpp",
 			"MU",
 			null
 		]

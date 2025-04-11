@@ -2,7 +2,7 @@
 
 Sorting::Sorting() = default;
 
-void Sorting::shellSort(QVector<Song>& song) {
+void Sorting::shell_sort(QVector<Song>& song) {
     int n = song.size();
     for (int interval = n / 2; interval > 0; interval /= 2) {
         for (int i = interval; i < n; i++) {
@@ -16,11 +16,11 @@ void Sorting::shellSort(QVector<Song>& song) {
     }
 }
 
-void Sorting::quickSort(QVector<Song>& song, int left, int right) {
+void Sorting::quick_sort(QVector<Song>& song, int left, int right) {
     if (left < right) {
         int pivotIndex = partition(song, left, right);
-        quickSort(song, left, pivotIndex - 1);
-        quickSort(song, pivotIndex + 1, right);
+        quick_sort(song, left, pivotIndex - 1);
+        quick_sort(song, pivotIndex + 1, right);
     }
 }
 

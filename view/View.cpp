@@ -3,11 +3,11 @@
 #include <QMimeData>
 
 View::View(QWidget *parent) : QWidget(parent) {
-    setupUI();
+    setup_ui();
     setAcceptDrops(true);
 }
 
-void View::setupUI() {
+void View::setup_ui() {
     setWindowTitle("Music Player");
     resize(500, 400);
 

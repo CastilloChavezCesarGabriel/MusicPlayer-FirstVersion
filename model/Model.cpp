@@ -1,7 +1,6 @@
 #include "Model.h"
-#include <QFile>
-#include <QFileInfo>
-#include <QDebug>
+#include <QRandomGenerator>
+#include <QVector>
 #include <QCoreApplication>
 #include <QStandardPaths>
 
@@ -146,13 +145,13 @@ void Model::dropFiles(const QList<QUrl> &urls) {
 }
 
 void Model::sortByNumber() {
-    sort.shellSort(songs);
+    sort.shell_sort(songs);
     lastSortMethod = "number";
     updateList();
 }
 
 void Model::sortByName() {
-    sort.quickSort(songs, 0, songs.size() - 1);
+    sort.quick_sort(songs, 0, songs.size() - 1);
     lastSortMethod = "name";
     updateList();
 }

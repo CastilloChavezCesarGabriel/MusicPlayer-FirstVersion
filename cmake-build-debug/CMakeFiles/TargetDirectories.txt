@@ -1,6 +1,0 @@
-/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/cmake-build-debug/CMakeFiles/MusicPlayerImproved.dir
-/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/cmake-build-debug/CMakeFiles/CopyResources.dir
-/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/cmake-build-debug/CMakeFiles/MusicPlayerImproved_autogen_timestamp_deps.dir
-/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/cmake-build-debug/CMakeFiles/MusicPlayerImproved_autogen.dir

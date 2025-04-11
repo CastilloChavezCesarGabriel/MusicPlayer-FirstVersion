@@ -1,5 +1,5 @@
-/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/cmake-build-debug/MusicPlayerImproved_autogen/NPUKSKGWT2/moc_Controller.cpp: /Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/controller/Controller.h \
-  /Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/cmake-build-debug/MusicPlayerImproved_autogen/moc_predefs.h \
+/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/cmake-build-debug/MusicPlayerImproved_autogen/NPUKSKGWT2/moc_Controller.cpp: /Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/controller/Controller.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/cmake-build-debug/MusicPlayerImproved_autogen/moc_predefs.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk/usr/include/AvailabilityInternalLegacy.h \
@@ -793,13 +793,12 @@
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stdarg_va_list.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/limits.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdarg.h \
-  /Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/model/Model.h \
-  /Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/model/Song.h \
-  /Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/model/Sorting.h \
-  /Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/view/View.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/model/Model.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/model/Song.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/model/Sorting.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/view/View.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QDir \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QObject \
-  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QRandomGenerator \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QStack \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QString \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QStringList \
@@ -887,7 +886,6 @@
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qpair.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qpoint.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qprocessordetection.h \
-  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qrandom.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qrect.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qrefcount.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qregularexpression.h \
@@ -990,7 +988,6 @@
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QLabel \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QListView \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QPushButton \
-  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QSlider \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QWidget \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qabstractbutton.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qabstractitemdelegate.h \

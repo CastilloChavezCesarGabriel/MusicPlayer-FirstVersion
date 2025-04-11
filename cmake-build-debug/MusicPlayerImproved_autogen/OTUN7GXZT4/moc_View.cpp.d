@@ -1,5 +1,5 @@
-/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/cmake-build-debug/MusicPlayerImproved_autogen/OTUN7GXZT4/moc_View.cpp: /Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/view/View.h \
-  /Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/cmake-build-debug/MusicPlayerImproved_autogen/moc_predefs.h \
+/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/cmake-build-debug/MusicPlayerImproved_autogen/OTUN7GXZT4/moc_View.cpp: /Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/view/View.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/cmake-build-debug/MusicPlayerImproved_autogen/moc_predefs.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk/usr/include/AvailabilityInternalLegacy.h \
@@ -892,7 +892,6 @@
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QLabel \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QListView \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QPushButton \
-  /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QSlider \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/QWidget \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qabstractbutton.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtWidgets.framework/Versions/A/Headers/qabstractitemdelegate.h \

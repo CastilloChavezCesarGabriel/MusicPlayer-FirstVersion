@@ -1,5 +1,5 @@
-/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/cmake-build-debug/MusicPlayerImproved_autogen/NLOY5YBGEN/moc_Model.cpp: /Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/model/Model.h \
-  /Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/cmake-build-debug/MusicPlayerImproved_autogen/moc_predefs.h \
+/Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/cmake-build-debug/MusicPlayerImproved_autogen/NLOY5YBGEN/moc_Model.cpp: /Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/model/Model.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/cmake-build-debug/MusicPlayerImproved_autogen/moc_predefs.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk/usr/include/AvailabilityInternalLegacy.h \
@@ -793,11 +793,10 @@
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stdarg_va_list.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/limits.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdarg.h \
-  /Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/model/Song.h \
-  /Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/model/Sorting.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/model/Song.h \
+  /Users/cesargabrielcastillochavez/CLionProjects/MusicPlayerImproved/model/Sorting.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QDir \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QObject \
-  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QRandomGenerator \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QString \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QStringList \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/QVector \
@@ -877,7 +876,6 @@
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qoverload.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qpair.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qprocessordetection.h \
-  /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qrandom.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qrefcount.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qscopedpointer.h \
   /opt/homebrew/Cellar/qt/6.9.0/lib/QtCore.framework/Versions/A/Headers/qscopeguard.h \

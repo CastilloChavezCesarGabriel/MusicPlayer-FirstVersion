@@ -1,0 +1,27 @@
+# ninja log v6
+3	117	1744327218010695408	CMakeFiles/CopyResources	62eb50432e468c40
+3	117	1744327218010695408	/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/cmake-build-debug/CMakeFiles/CopyResources	62eb50432e468c40
+117	571	1744327218570252000	MusicPlayerImproved_autogen/timestamp	15f7ebeef6b38d8f
+117	571	1744327218570252000	MusicPlayerImproved_autogen/mocs_compilation.cpp	15f7ebeef6b38d8f
+117	571	1744327218570252000	/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/cmake-build-debug/MusicPlayerImproved_autogen/timestamp	15f7ebeef6b38d8f
+117	571	1744327218570252000	/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/cmake-build-debug/MusicPlayerImproved_autogen/mocs_compilation.cpp	15f7ebeef6b38d8f
+580	1203	1744327218587625273	CMakeFiles/MusicPlayerImproved.dir/model/Sorting.cpp.o	b74e20f739c7f1a3
+579	1359	1744327218586262761	CMakeFiles/MusicPlayerImproved.dir/model/Song.cpp.o	6ed8126958210d38
+576	1544	1744327218582877148	CMakeFiles/MusicPlayerImproved.dir/model/Model.cpp.o	661fe42d60ee345
+574	1556	1744327218581754929	CMakeFiles/MusicPlayerImproved.dir/view/View.cpp.o	a73993d95681e665
+573	1606	1744327218580629294	CMakeFiles/MusicPlayerImproved.dir/main.cpp.o	74a25296d6b5ac5f
+573	1722	1744327218580468126	CMakeFiles/MusicPlayerImproved.dir/MusicPlayerImproved_autogen/mocs_compilation.cpp.o	74a8b9413e684dca
+577	1766	1744327218584000199	CMakeFiles/MusicPlayerImproved.dir/controller/Controller.cpp.o	2989511f5510a614
+1766	1853	1744327219773010745	MusicPlayerImproved	9c66d27d6894beb2
+6	107	1744329722431101544	CMakeFiles/CopyResources	62eb50432e468c40
+6	107	1744329722431101544	/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/cmake-build-debug/CMakeFiles/CopyResources	62eb50432e468c40
+107	442	1744329722857715000	MusicPlayerImproved_autogen/timestamp	15f7ebeef6b38d8f
+107	442	1744329722857715000	MusicPlayerImproved_autogen/mocs_compilation.cpp	15f7ebeef6b38d8f
+107	442	1744329722857715000	/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/cmake-build-debug/MusicPlayerImproved_autogen/timestamp	15f7ebeef6b38d8f
+107	442	1744329722857715000	/Users/cesargabrielcastillochavez/Desktop/MusicPlayerImproved/cmake-build-debug/MusicPlayerImproved_autogen/mocs_compilation.cpp	15f7ebeef6b38d8f
+442	1431	1744329722867576760	CMakeFiles/MusicPlayerImproved.dir/model/Model.cpp.o	661fe42d60ee345
+442	1439	1744329722867480759	CMakeFiles/MusicPlayerImproved.dir/view/View.cpp.o	a73993d95681e665
+442	1483	1744329722867373882	CMakeFiles/MusicPlayerImproved.dir/main.cpp.o	74a25296d6b5ac5f
+442	1641	1744329722867678344	CMakeFiles/MusicPlayerImproved.dir/controller/Controller.cpp.o	2989511f5510a614
+442	1646	1744329722867203047	CMakeFiles/MusicPlayerImproved.dir/MusicPlayerImproved_autogen/mocs_compilation.cpp.o	74a8b9413e684dca
+1646	1803	1744329724071220805	MusicPlayerImproved	9c66d27d6894beb2

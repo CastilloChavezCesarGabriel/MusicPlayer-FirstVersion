@@ -5,15 +5,15 @@
 #include <QStandardPaths>
 
 Model::Model(QObject *parent) : QObject(parent) {
-    resourcesPath = QDir::currentPath() + "/resources";
-    announcementsPath = QDir::currentPath() + "/Announcements";
-    loadSongs();
-    loadAdFiles();
-    std::shuffle(songs.begin(), songs.end(), std::mt19937(QRandomGenerator::global()->generate()));
+    resources_path_ = QDir::currentPath() + "/resources";
+    announcements_path_ = QDir::currentPath() + "/Announcements";
+    load_songs();
+    load_ad_files();
+    std::shuffle(songs_.begin(), songs_.end(), std::mt19937(QRandomGenerator::global()->generate()));
 }
 
-void Model::loadSongs() {
-    QString directionPath = getMusicPath();
+void Model::load_songs() {
+    QString directionPath = get_music_path();
     QDir dir(directionPath);
 
     if (!dir.exists()) {
@@ -21,20 +21,20 @@ void Model::loadSongs() {
         return;
     }
 
-    songList = getExtension(directionPath);
-    songs.clear();
+    song_list_ = get_extension(directionPath);
+    songs_.clear();
 
-    for (auto &file : songList) {
+    for (auto &file : song_list_) {
         QString fullPath = dir.absoluteFilePath(file);
-        songs.append(Song(0,file, fullPath));
+        songs_.append(Song(0,file, fullPath));
     }
 
     shuffle();
-    emit songsUpdated(songList);
+    emit songs_updated(song_list_);
 }
 
-void Model::loadAdFiles() {
-    QString adDirectionPath = getAnnouncementsPath();
+void Model::load_ad_files() {
+    QString adDirectionPath = get_announcements_path();
     QDir adDir(adDirectionPath);
 
     if (!adDir.exists()) {
@@ -42,71 +42,71 @@ void Model::loadAdFiles() {
         return;
     }
 
-    adFiles = getExtension(adDirectionPath);
+    ad_files_ = get_extension(adDirectionPath);
 
-    for (auto &file : adFiles) {
+    for (auto &file : ad_files_) {
         file = adDir.absoluteFilePath(file);
     }
 
-    if (adFiles.isEmpty()) {
+    if (ad_files_.isEmpty()) {
         qWarning() << "No ads found!";
     } else {
-        qDebug() << "Loaded ads:" << adFiles;
+        qDebug() << "Loaded ads:" << ad_files_;
     }
 
-    emit adsUpdated(adFiles);
+    emit ads_updated(ad_files_);
 }
 
-QStringList Model::getExtension(const QString &directionPath) const {
+QStringList Model::get_extension(const QString &directionPath) {
     QDir dir(directionPath);
     QStringList filters = {"*.mp3", "*.wav"};
     return dir.entryList(filters, QDir::Files);
 }
 
-QString Model::getMusicPath() const {
+QString Model::get_music_path() {
     return QCoreApplication::applicationDirPath() + "/resources/music";
 }
 
-QString Model::getAnnouncementsPath() const {
+QString Model::get_announcements_path() {
     return QCoreApplication::applicationDirPath() + "/resources/announcements";
 }
 
 void Model::add(const QString &filePath) {
     if (filePath.isEmpty()) return;
-    saveToResources(filePath);
+    save_to_resources(filePath);
 
     QFileInfo info(filePath);
-    QString newFilePath = getMusicPath() + "/" + info.fileName();
-    songs.append(Song(0, info.fileName(), newFilePath));
-    songList.append(newFilePath);
+    QString newFilePath = get_music_path() + "/" + info.fileName();
+    songs_.append(Song(0, info.fileName(), newFilePath));
+    song_list_.append(newFilePath);
 
-    emit songsUpdated(songList);
+    emit songs_updated(song_list_);
 }
 
 void Model::remove(const QString &filePath) {
     if (filePath.isEmpty()) return;
 
-    auto foundSong = std::find_if(songs.begin(), songs.end(), [&](Song &song) {
-        return song.getFilePath() == filePath;
+    auto found_song = std::find_if(songs_.begin(), songs_.end(), [&](Song &song) {
+        return song.get_file_path() == filePath;
     });
 
-    if (foundSong != songs.end()) {
+    if (found_song != songs_.end()) {
         if (QFile::remove(filePath)) {
             qDebug() << "Deleted song file:" << filePath;
         } else {
             qWarning() << "Failed to delete song file:" << filePath;
         }
 
-        songs.erase(foundSong);
-        updateList();
+        songs_.erase(found_song);
+        update_list();
     } else {
         qWarning() << "Song not found in list.";
     }
 }
 
-void Model::saveToResources(const QString &filePath) {
+void Model::save_to_resources(const QString &filePath) {
     QFileInfo fileInfo(filePath);
-    QString destination = getMusicPath();
+    QString destination = get_music_path();
     QString destinationPath = destination + "/" + fileInfo.fileName();
 
     if (QFile::exists(destinationPath)) {
@@ -121,12 +121,12 @@ void Model::saveToResources(const QString &filePath) {
     }
 }
 
-QString Model::getRandomAd() const {
-    if (adFiles.isEmpty()) return {};
-    return adFiles.at(QRandomGenerator::global()->bounded(adFiles.size()));
+QString Model::get_random_ad() const {
+    if (ad_files_.isEmpty()) return {};
+    return ad_files_.at(QRandomGenerator::global()->bounded(ad_files_.size()));
 }
 
-void Model::dropFiles(const QList<QUrl> &urls) {
+void Model::drop_files(const QList<QUrl> &urls) {
     QStringList newSongs;
 
     for (const QUrl &url : urls) {
@@ -138,38 +138,38 @@ void Model::dropFiles(const QList<QUrl> &urls) {
     }
 
     if (!newSongs.isEmpty()) {
-        songList.append(newSongs);
-        emit songsUpdated(songList);
-        emit disableButtons();
+        song_list_.append(newSongs);
+        emit songs_updated(song_list_);
+        emit disable_buttons();
     }
 }
 
-void Model::sortByNumber() {
-    sort.shell_sort(songs);
-    lastSortMethod = "number";
-    updateList();
+void Model::sort_by_number() {
+    sort_.shell_sort(songs_);
+    last_sort_method_ = "number";
+    update_list();
 }
 
-void Model::sortByName() {
-    sort.quick_sort(songs, 0, songs.size() - 1);
-    lastSortMethod = "name";
-    updateList();
+void Model::sort_by_name() {
+    sort_.quick_sort(songs_, 0, songs_.size() - 1);
+    last_sort_method_ = "name";
+    update_list();
 }
 
-QString Model::getSongAt(int index) const {
-    if (index < 0 || index >= songs.size()) return QString();
-    return songs[index].getFilePath();
+QString Model::get_song_at(int index) const {
+    if (index < 0 || index >= songs_.size()) return QString();
+    return songs_[index].get_file_path();
 }
 
 void Model::shuffle() {
-    std::shuffle(songs.begin(), songs.end(), std::mt19937(QRandomGenerator::global()->generate()));
+    std::shuffle(songs_.begin(), songs_.end(), std::mt19937(QRandomGenerator::global()->generate()));
 }
 
-void Model::updateList() {
-    songList.clear();
-    for (const Song &song : songs) {
-        songList.append(song.getFilePath());
+void Model::update_list() {
+    song_list_.clear();
+    for (const Song &song : songs_) {
+        song_list_.append(song.get_file_path());
     }
-    emit songsUpdated(songList);
+    emit songs_updated(song_list_);
 }
 

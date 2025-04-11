@@ -11,75 +11,75 @@ void View::setup_ui() {
     setWindowTitle("Music Player");
     resize(500, 400);
 
-    sortLayout = new QHBoxLayout();
-    btnSortByNumber = new QPushButton("Sort by Number", this);
-    btnSortByName = new QPushButton("Sort Alphabetically", this);
-    sortLayout->addWidget(btnSortByNumber);
-    sortLayout->addWidget(btnSortByName);
-    sortLayout->setAlignment(Qt::AlignCenter);
+    sort_layout_ = new QHBoxLayout();
+    btn_sort_by_number = new QPushButton("Sort by Number", this);
+    btn_sort_by_name = new QPushButton("Sort Alphabetically", this);
+    sort_layout_->addWidget(btn_sort_by_number);
+    sort_layout_->addWidget(btn_sort_by_name);
+    sort_layout_->setAlignment(Qt::AlignCenter);
 
-    mainLayout = new QVBoxLayout(this);
-    controlLayout = new QHBoxLayout();
-    volumeLayout = new QHBoxLayout();
-    filesLayout = new QHBoxLayout();
+    main_layout_ = new QVBoxLayout(this);
+    control_layout_ = new QHBoxLayout();
+    volume_layout_ = new QHBoxLayout();
+    files_layout_ = new QHBoxLayout();
 
-    songListView = new QListView(this);
-    songListModel = new QStringListModel(this);
-    songListView->setModel(songListModel);
+    song_list_view = new QListView(this);
+    song_list_model = new QStringListModel(this);
+    song_list_view->setModel(song_list_model);
 
-    btnPlay = new QPushButton("▶", this);
-    btnPause = new QPushButton("⏸", this);
-    btnStop = new QPushButton("⏹", this);
-    btnNext = new QPushButton("⏭", this);
-    btnPrevious = new QPushButton("⏮", this);
-    btnAddSong = new QPushButton("✚ Add Song", this);
-    btnRemoveSong = new QPushButton("⚪ Remove Song", this);
-    skipAdButton = new QPushButton("⏭ Skip Ad", this);
-    skipAdButton->setVisible(false);
+    btn_play = new QPushButton("▶", this);
+    btn_pause = new QPushButton("⏸", this);
+    btn_stop = new QPushButton("⏹", this);
+    btn_next = new QPushButton("⏭", this);
+    btn_previous = new QPushButton("⏮", this);
+    btn_add_song = new QPushButton("✚ Add Song", this);
+    btn_remove_song = new QPushButton("⚪ Remove Song", this);
+    skip_ad_button = new QPushButton("⏭ Skip Ad", this);
+    skip_ad_button->setVisible(false);
 
-    volumeSlider = new QSlider(Qt::Horizontal, this);
-    volumeSlider->setRange(0, 100);
-    volumeSlider->setValue(50);
+    volume_slider = new QSlider(Qt::Horizontal, this);
+    volume_slider->setRange(0, 100);
+    volume_slider->setValue(50);
 
-    volumeLabel = new QLabel("Volume: 50%", this);
+    volume_label = new QLabel("Volume: 50%", this);
 
-    controlLayout->addWidget(btnPrevious);
-    controlLayout->addWidget(btnPlay);
-    controlLayout->addWidget(btnPause);
-    controlLayout->addWidget(btnStop);
-    controlLayout->addWidget(btnNext);
-    controlLayout->setAlignment(Qt::AlignCenter);
+    control_layout_->addWidget(btn_previous);
+    control_layout_->addWidget(btn_play);
+    control_layout_->addWidget(btn_pause);
+    control_layout_->addWidget(btn_stop);
+    control_layout_->addWidget(btn_next);
+    control_layout_->setAlignment(Qt::AlignCenter);
 
-    volumeLayout->addWidget(volumeLabel);
-    volumeLayout->addWidget(volumeSlider);
-    volumeLayout->setAlignment(Qt::AlignCenter);
+    volume_layout_->addWidget(volume_label);
+    volume_layout_->addWidget(volume_slider);
+    volume_layout_->setAlignment(Qt::AlignCenter);
 
-    filesLayout->addWidget(btnAddSong);
-    filesLayout->addWidget(btnRemoveSong);
-    filesLayout->setAlignment(Qt::AlignCenter);
+    files_layout_->addWidget(btn_add_song);
+    files_layout_->addWidget(btn_remove_song);
+    files_layout_->setAlignment(Qt::AlignCenter);
 
-    mainLayout->addLayout(sortLayout);
-    mainLayout->addWidget(songListView);
-    mainLayout->addLayout(controlLayout);
-    mainLayout->addLayout(volumeLayout);
-    mainLayout->addWidget(skipAdButton, 0, Qt::AlignCenter);
-    mainLayout->addLayout(filesLayout);
+    main_layout_->addLayout(sort_layout_);
+    main_layout_->addWidget(song_list_view);
+    main_layout_->addLayout(control_layout_);
+    main_layout_->addLayout(volume_layout_);
+    main_layout_->addWidget(skip_ad_button, 0, Qt::AlignCenter);
+    main_layout_->addLayout(files_layout_);
 
-    setLayout(mainLayout);
+    setLayout(main_layout_);
 }
 
-void View::setButtonsEnabled(bool enabled) const {
-    btnPlay->setEnabled(enabled);
-    btnPause->setEnabled(enabled);
-    btnStop->setEnabled(enabled);
-    btnNext->setEnabled(enabled);
-    btnPrevious->setEnabled(enabled);
-    btnAddSong->setEnabled(enabled);
-    btnRemoveSong->setEnabled(enabled);
+void View::set_buttons_enabled(bool enabled) const {
+    btn_play->setEnabled(enabled);
+    btn_pause->setEnabled(enabled);
+    btn_stop->setEnabled(enabled);
+    btn_next->setEnabled(enabled);
+    btn_previous->setEnabled(enabled);
+    btn_add_song->setEnabled(enabled);
+    btn_remove_song->setEnabled(enabled);
 }
 
-void View::updateSongList(const QStringList &songs) const {
-    songListModel->setStringList(songs);
+void View::update_song_list(const QStringList &songs) const {
+    song_list_model->setStringList(songs);
 }
 
 void View::dragEnterEvent(QDragEnterEvent *event) {
@@ -89,9 +89,8 @@ void View::dragEnterEvent(QDragEnterEvent *event) {
 }
 
 void View::dropEvent(QDropEvent *event){
-    QList<QUrl> urls = event->mimeData()->urls();
-    if (!urls.isEmpty()) {
-        emit filesDropped(urls);
+    if (const QList<QUrl> urls = event->mimeData()->urls(); !urls.isEmpty()) {
+        emit files_dropped(urls);
     }
 }
 

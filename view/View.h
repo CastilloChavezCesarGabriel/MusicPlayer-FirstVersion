@@ -12,42 +12,42 @@ Q_OBJECT
 
 public:
     explicit View(QWidget *parent = nullptr);
-    void setButtonsEnabled(bool enabled) const;
+    void set_buttons_enabled(bool enabled) const;
 
-    QPushButton *btnPlay{};
-    QPushButton *btnPause{};
-    QPushButton *btnStop{};
-    QPushButton *btnNext{};
-    QPushButton *btnPrevious{};
-    QPushButton *btnAddSong{};
-    QPushButton *btnRemoveSong{};
-    QPushButton *btnSortByNumber;
-    QPushButton *btnSortByName;
-    QPushButton *skipAdButton{};
+    QPushButton *btn_play{};
+    QPushButton *btn_pause{};
+    QPushButton *btn_stop{};
+    QPushButton *btn_next{};
+    QPushButton *btn_previous{};
+    QPushButton *btn_add_song{};
+    QPushButton *btn_remove_song{};
+    QPushButton *btn_sort_by_number;
+    QPushButton *btn_sort_by_name;
+    QPushButton *skip_ad_button{};
 
-    QListView *songListView{};
-    QStringListModel *songListModel{};
+    QListView *song_list_view{};
+    QStringListModel *song_list_model{};
 
-    QSlider *volumeSlider{};
-    QLabel *volumeLabel{};
+    QSlider *volume_slider{};
+    QLabel *volume_label{};
 
 private:
-    QVBoxLayout *mainLayout{};
-    QHBoxLayout *controlLayout{};
-    QHBoxLayout *volumeLayout{};
-    QHBoxLayout *filesLayout{};
-    QHBoxLayout *sortLayout{};
+    QVBoxLayout *main_layout_{};
+    QHBoxLayout *control_layout_{};
+    QHBoxLayout *volume_layout_{};
+    QHBoxLayout *files_layout_{};
+    QHBoxLayout *sort_layout_{};
     void setup_ui();
 
 public slots:
-    void updateSongList(const QStringList &songs) const;
+    void update_song_list(const QStringList &songs) const;
 
 protected:
     void dragEnterEvent(QDragEnterEvent *event) override;
     void dropEvent(QDropEvent *event) override;
 
 signals:
-    void filesDropped(const QList<QUrl> &urls);
+    void files_dropped(const QList<QUrl> &urls);
 };
 
 #endif //MUSIC_PLAYER_IMPROVED_VIEW_H

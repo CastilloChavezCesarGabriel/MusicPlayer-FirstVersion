@@ -6,8 +6,8 @@
 class Sorting{
 public:
     Sorting();
-    void shell_sort(QVector<Song>& song);
-    void quick_sort(QVector<Song>& song, int left, int right);
+    static void shell_sort(QVector<Song>& song);
+    static void quick_sort(QVector<Song>& song, int left, int right);
 
 private:
     static int partition(QVector<Song>& song, int left, int right);

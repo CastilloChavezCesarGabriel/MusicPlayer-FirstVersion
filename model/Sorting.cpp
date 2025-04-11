@@ -8,7 +8,7 @@ void Sorting::shell_sort(QVector<Song>& song) {
         for (int i = interval; i < n; i++) {
             Song swapValue = song[i];
             int j;
-            for (j = i; j >= interval && song[j - interval].getNumber() < swapValue.getNumber(); j -= interval) {
+            for (j = i; j >= interval && song[j - interval].get_number() < swapValue.get_number(); j -= interval) {
                 song[j] = song[j - interval];
             }
             song[j] = swapValue;
@@ -25,10 +25,10 @@ void Sorting::quick_sort(QVector<Song>& song, int left, int right) {
 }
 
 int Sorting::partition(QVector<Song>& song, int left, int right) {
-    QString pivot = song[right].getName();
+    QString pivot = song[right].get_name();
     int i = left - 1;
     for (int j = left; j < right; j++) {
-        QString songName = song[j].getName().toLower();
+        QString songName = song[j].get_name().toLower();
         QString pivotName = pivot.toLower();
 
         if (songName < pivotName) {

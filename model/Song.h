@@ -13,11 +13,11 @@ private:
     QString file_path_;
 
 public:
-    Song(int number, const QString &name, const QString &filePath);
+    Song(int number, const QString &name, const QString &file_path);
 
-    int getNumber() const;
-    QString getName() const;
-    QString getFilePath() const;
+    int get_number() const;
+    QString get_name() const;
+    QString get_file_path() const;
 };
 
 #endif //MUSIC_PLAYER_IMPROVED_SONG_H

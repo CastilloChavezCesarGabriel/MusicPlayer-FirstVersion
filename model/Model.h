@@ -14,44 +14,45 @@ class Model final : public QObject {
 Q_OBJECT
 
 private:
-    QStringList songList;
-    QVector<Song> songs;
-    QStringList adFiles;
-    QString resourcesPath;
-    QString announcementsPath;
-    bool playingAd = false;
-    Sorting sort;
-    QString lastSortMethod;
+    QStringList song_list_;
+    QVector<Song> songs_;
+    QStringList ad_files_;
+    QString resources_path_;
+    QString announcements_path_;
+    bool playing_ad_ = false;
+    Sorting sort_;
+    QString last_sort_method_;
 
 public:
     explicit Model(QObject *parent = nullptr);
 
-    QStringList getSongs() const { return songList; }
-    bool isPlayingAd() const { return playingAd; }
-    QString getSongAt(int index) const;
+    QStringList get_songs() const { return song_list_; }
+    bool is_playing_ad() const { return playing_ad_; }
+    QString get_song_at(int index) const;
 
     void add(const QString &filePath);
     void remove(const QString &filePath);
-    void loadAdFiles();
-    QString getRandomAd() const;
-    void setPlayingAd(bool state) { playingAd = state; }
-    void dropFiles(const QList<QUrl> &urls);
-    void sortByNumber();
-    void sortByName();
+    void load_ad_files();
+    QString get_random_ad() const;
+    void set_playing_ad(bool state) { playing_ad_ = state; }
+    void drop_files(const QList<QUrl> &urls);
+    void sort_by_number();
+    void sort_by_name();
     void shuffle();
-    void updateList();
+    void update_list();
 
 signals:
-    void songsUpdated(const QStringList &songs);
-    void adsUpdated(const QStringList &ads);
-    void disableButtons();
+    void songs_updated(const QStringList &songs);
+    void ads_updated(const QStringList &ads);
+    void disable_buttons();
 
 private:
-    void loadSongs();
-    void saveToResources(const QString &filePath);
-    QStringList getExtension(const QString &directionPath) const;
-    QString getMusicPath() const;
-    QString getAnnouncementsPath() const;
+    void load_songs();
+
+    static void save_to_resources(const QString &filePath);
+    static QStringList get_extension(const QString &directionPath);
+    static QString get_music_path();
+    static QString get_announcements_path();
 };
 
 #endif //MUSIC_PLAYER_IMPROVED_MODEL_H
